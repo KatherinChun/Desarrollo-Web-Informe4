@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import './LoginComponent.css';
 
 @Component({
   selector: 'app-login',
