@@ -124,7 +124,7 @@ button {
 	outline: none;
 }
 
-input[type="submit"]:hover{
+button:hover{
 	border-color: purple;
 	transition: .5s;
 }
@@ -138,6 +138,7 @@ input[type="submit"]:hover{
 }
 
 .registrarse a{
+  cursor: pointer;
 	color: blue;
 	text-decoration: none;
 }
