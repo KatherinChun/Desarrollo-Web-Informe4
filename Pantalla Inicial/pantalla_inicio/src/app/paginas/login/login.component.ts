@@ -17,9 +17,5 @@ export class LoginComponent {
     // También puedes mostrar un mensaje de error si la autenticación falla.
   }
 
-  registrarUsuario(){
-
-    console.log('registrar usuario');
-  }
   
 }

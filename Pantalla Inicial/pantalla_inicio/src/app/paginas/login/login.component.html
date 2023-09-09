@@ -1,31 +1,21 @@
-<div class="login-container">
-    <h2>Iniciar Sesión</h2>
-    <form>
-    
-    <div class="form-group">
-        <label for="nombre"></label>
-        <input placeholder="Nombre de Usuario" type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-    </div>
-      
-    <div class="form-group2">
-        <label for="contrasena"></label>
-        <input placeholder="Contraseña" type="password" id="contrasena" name="contrasena" [(ngModel)]="contrasena" required>
-    </div>
-      
-    <div class="form-group">
-        <label>
-          <input type="checkbox" [(ngModel)]="recordarUsuario"> Recordar Usuario
-        </label>
-    </div>
-
-    <div class="button-container">
-        <button (click)="iniciarSesion()">Iniciar Sesión</button>
-        <button (click)="registrarUsuario()">Registrarse</button>
-    </div>
-    
+<body>
+<div class="formulario">
+    <h2>Iniciar Sesion</h2>
+    <form method="post">
+        <div class="nombre">
+             <input type="text" required>
+             <label>Nombre</label>
+        </div>
+        <div class="contrasena">
+            <input type="password" required>
+            <label>Contraseña</label>
+        </div>
+        <div class="contrasena_p">¿Olvido su contraseña?</div>
+        <button (click)="iniciarSesion()">Ingresar</button>
+        <div class="registrarse">
+            <a href="#">Crear Cuenta</a>
+        </div>
     </form>
-    
-    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-  
-  </div>
-  
+        
+</div>
+</body> 
