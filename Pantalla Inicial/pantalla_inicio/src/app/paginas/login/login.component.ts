@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import './LoginComponent.css';
+
 
 @Component({
   selector: 'app-login',
@@ -16,4 +16,10 @@ export class LoginComponent {
     // Por ejemplo, puedes enviar los datos al servidor para autenticar al usuario.
     // También puedes mostrar un mensaje de error si la autenticación falla.
   }
+
+  registrarUsuario(){
+
+    console.log('registrar usuario');
+  }
+  
 }
