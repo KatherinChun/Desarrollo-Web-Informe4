@@ -1,13 +1,12 @@
 *{
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: #e6e6e6;
 }
 
 .login-container {
     width: 100%;
     height: 95vh;  
     background-color: #e6e6e6;
-    background-size: cover; 
     display: flex;
     flex-direction: column;
     justify-content: center; 
