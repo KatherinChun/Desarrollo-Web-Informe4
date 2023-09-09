@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   nombre: string = '';
   contrasena: string = '';
-  recordarUsuario: boolean = false;
 
   iniciarSesion() {
     // Aquí puedes agregar la lógica para iniciar sesión.
