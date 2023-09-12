@@ -1,0 +1,75 @@
+/* Estilos generales */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-image: url(https://emi.ingenieria.usac.edu.gt/wp-content/uploads/2016/11/fiusac02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+	height: 100vh;
+}
+  /* Estilos para la barra superior */
+  .barra-superior {
+    position: fixed; /* Fija la barra en la parte superior de la ventana */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(https://images.unsplash.com/photo-1614850523011-8f49ffc73908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG9zJTIwYXp1bGVzfGVufDB8fDB8fHww&w=1000&q=80);
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    height: 60px; /* Altura de la barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espaciado interno */
+  }
+  
+  /* Estilos para los botones redondos */
+  .boton-redondo, .btn-logo {
+    background-color: transparent; /* Fondo transparente */
+    border: none;
+    cursor: pointer;
+    outline: none; /* Quita el contorno al hacer clic */
+  }
+  
+  .boton-redondo img{
+    max-width: 30px; /* Tamaño máximo de la imagen */
+    border-radius: 100%; /* Bordes redondos */
+    display: block; /* Elimina espacio adicional alrededor de la imagen */
+  }
+
+  .btn-logo img {
+    max-width: 60px; /* Tamaño máximo de la imagen */
+    border-radius: 100%; /* Bordes redondos */
+    display: block; /* Elimina espacio adicional alrededor de la imagen */
+  }
+  
+  /* Estilos para el menú de navegación */
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline;
+    margin-right: 20px; /* Espaciado entre elementos del menú */
+  }
+  
+  .menu li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+  }
+
+  .menu li a{  /* Pones estilo de texto y color*/
+    font-size: 700;
+    color: #f0f0f0;
+    text-decoration:none;
+  }
+
+  .menu li:hover{
+    transform: scale(1,2);
+  }
+  
+  .menu li a:hover{
+    color: rgb(12, 91, 122);
+  }
