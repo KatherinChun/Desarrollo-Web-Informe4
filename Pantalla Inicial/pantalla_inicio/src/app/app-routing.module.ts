@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './paginas/login/login.component';
 import { RegistroComponent } from './paginas/registro/registro.component';  // importar el componente 
 import { InicioComponent } from './paginas/inicio/inicio.component';
+import {ContraComponent} from './paginas/contra/contra.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },     //ruta del componente o pagina
   { path: 'Inicio', component: InicioComponent}, // ruta Inicio
   { path: '', redirectTo: '/login', pathMatch: 'full' },   // ruta por defecto
+  { path: 'contra', component: ContraComponent}
 ];
 
 @NgModule({

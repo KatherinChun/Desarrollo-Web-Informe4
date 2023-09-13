@@ -14,7 +14,7 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 400px;
-  height: 440px;
+  	height: 440px;
 	background: rgb(255, 255, 255);
 	border-radius: 10px;
 
@@ -34,19 +34,25 @@ body {
 	box-sizing: border-box;
 }
 
-form .nombre{
+form .carnet{
 	position: relative;
 	border-bottom: 2px solid #84c8ff;
 	margin: 30px 0; 
 }
 
-form .contrasena{
+form .Correo{
 	position: relative;
 	border-bottom: 2px solid #84c8ff;
 	margin: 30px 0; 
 }
 
-.nombre input{
+form .nueva{
+	position: relative;
+	border-bottom: 2px solid #84c8ff;
+	margin: 30px 0; 
+}
+
+.carnet input{
 	width: 100%;
 	padding: 0 5px;
 	height: 40px;
@@ -57,7 +63,7 @@ form .contrasena{
 
 }
 
-.contrasena input{
+.Correo input{
 	width: 100%;
 	padding: 0 5px;
 	height: 40px;
@@ -68,7 +74,18 @@ form .contrasena{
 
 }
 
-.nombre label{
+.nueva input{
+	width: 100%;
+	padding: 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+
+}
+
+.carnet label{
 	position: absolute;
 	top: 50%;
 	left: 5px;
@@ -78,7 +95,7 @@ form .contrasena{
 	pointer-events: none;
 }
 
-.contrasena label{
+.Correo label{
 	position: absolute;
 	top: 50%;
 	left: 5px;
@@ -88,34 +105,34 @@ form .contrasena{
 	pointer-events: none;
 }
 
+.nueva label{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: grey;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+}
 
-.nombre input:focus ~ label{
+
+.carnet input:focus ~ label{
 	top: -5px;
 	color: rgb(128, 136, 255);
 }
 
 
-.contrasena input:focus ~ label{
+.Correo input:focus ~ label{
+	top: -5px;
+	color: rgb(128, 136, 255);
+}
+
+.nueva input:focus ~ label{
 	top: -5px;
 	color: rgb(128, 136, 255);
 }
 
 
-.contrasena_p{
-	margin: -5px 0 20px 5px;
-	color: blue;
-	cursor: pointer;
-}
-
-.contrasena_p a{
-	cursor: pointer;
-	color: blue;
-	text-decoration: none;
-}
-
-.contrasena_p a:hover{
-	text-decoration: none;
-}
 
 button {
 	width: 100%;
@@ -123,7 +140,6 @@ button {
 	border: 1px solid;
 	background: rgb(97, 12, 255);
 	border-radius: 25px;
-	font-size: 10px;
 	font-size: 18px;
 	color: white;
 	cursor: pointer;
@@ -135,22 +151,7 @@ button:hover{
 	transition: .5s;
 }
 
-
-.registrarse{
-	margin: 30px 0;
-	text-align: center;
-	font-size: 16px;
-	color: black;
+button:active{
+	background: rgb(97, 12, 255);
 }
 
-.registrarse a{
-  	cursor: pointer;
-	color: blue;
-	text-decoration: none;
-}
-
-.registrarse a:hover{
-	text-decoration: underline;
-}
-
-  

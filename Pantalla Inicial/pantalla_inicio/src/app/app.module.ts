@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './paginas/login/login.component'; 
 import { RegistroComponent } from './paginas/registro/registro.component'; // importar el componente
 import { InicioComponent } from './paginas/inicio/inicio.component';
-import { AppRoutingModule } from './app-routing.module'; // importar el modulo de rutas
+import { AppRoutingModule } from './app-routing.module';
+import { ContraComponent } from './paginas/contra/contra.component'; // importar el modulo de rutas
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    InicioComponent
+    InicioComponent,
+    ContraComponent
   ],
   imports: [
     BrowserModule,
