@@ -10,7 +10,10 @@
             <input type="password" required>
             <label>Contraseña</label>
         </div>
-        <div class="contrasena_p">¿Olvido su contraseña?</div>
+        <div class="contrasena_p">
+        <a routerLink="/contra">¿Olvido su contraseña?</a>
+        </div>
+
         <button (click)="iniciarSesion()">Ingresar</button>
         <div class="registrarse">
             <a routerLink="/registro">Crear Cuenta</a> <!-- se enlazan las paginas/componentes-->
