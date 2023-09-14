@@ -16,11 +16,29 @@
                 <label>Nueva Contraseña</label>
             </div>
             
-            <button (click)="Cambiar()">Cambiar Contraseña</button>
+            <button (click)="Actualizar()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Cambiar Contraseña
+            </button>
         </form>
 
        
             
     </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">Contraseña Cambiada</h1>
+        </div>
+        <div class="modal-footer btn-sm">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Salir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </body> 
     

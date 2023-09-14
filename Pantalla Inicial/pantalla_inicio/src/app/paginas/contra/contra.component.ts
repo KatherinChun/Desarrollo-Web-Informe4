@@ -19,4 +19,12 @@ export class ContraComponent {
   Actualizar() {
     
   }
+
+
+
+
+  
+
+  
+
 }
