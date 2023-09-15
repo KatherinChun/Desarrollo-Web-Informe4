@@ -5,68 +5,31 @@ body {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	/*background-image: url(https://emi.ingenieria.usac.edu.gt/wp-content/uploads/2016/11/fiusac02.jpg);
   */
-  background-color: rgb(0, 70, 67);
+  background-color: #abd1c6;
   background-size: cover;
   background-repeat: no-repeat; 
 	height: 100vh;
   overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
   border: 0px solid #ccc;
 }
-  /* Estilos para la barra superior */
-  .barra-superior {
-    position: fixed; /* Fija la barra en la parte superior de la ventana */
-    top: 0;
-    left: 0;
-    right: 0;
-    /*background-image: url(https://images.unsplash.com/photo-1614850523011-8f49ffc73908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG9zJTIwYXp1bGVzfGVufDB8fDB8fHww&w=1000&q=80);
-    /* Ruta de la imagen de fondo */
-    background-color: #f9bc60;
-    background-size: cover;
-    height: 65px; /* Altura de la barra */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Espaciado interno */
-    border: 3px solid #000000; /* Borde sólido de 2 píxeles de grosor, color gris (#333) */
-    border-radius: 50px; /* Bordes redondeados */
-    margin-top: 30px;
-    margin-left: 110px;
-    margin-right: 110px;
-  }
-  
-  /* Estilos para el menú de navegación */
-  .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu li {
-    display: inline;
-    margin-right: 35px; /* Espaciado entre elementos del menú */
-  }
-  
-  .menu li:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento */
-  }
-
-  .menu li a{  /* Pones estilo de texto y color*/
-    font-size: 16px;
-    color: #000000;
-    text-decoration:none;
-    font-family: Arial Black
-  }
-
-  .menu li:hover{
-    transform: scale(1,2);
-  }
-  
-  .menu li a:hover{
-    color: rgb(255, 255, 255);
-  }
 /*--------------------------------------------------------------------------------------------------------*/
+.espacio-buscador{
+  height: 70px;
+  padding: 0 10px; /* Espaciado interno */
+  border: 3px solid #000000; /* Borde sólido de 2 píxeles de grosor, color gris (#333) */
+  border-radius: 30px; /* Bordes redondeados */
+  background-color: rgb(0, 70, 67);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-top: 130px; /* Agrega un espacio superior */
+  left: 50%; /* Mueve el elemento del ancho del contenedor */
+  transform: translate(-50%, -50%);
+  width: 60%; /* Toma el 100% del ancho del contenedor padre */
+  height: 80px;
+}
 
-/* Estilos para el botón cilíndrico con imagen de fondo */
 .btn-web, .btn-usac, .btn-usuario{
   display: inline-block;
   background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
@@ -87,13 +50,14 @@ body {
 
 .btn-web{
   /*background-image: url('https://w7.pngwing.com/pngs/713/232/png-transparent-computer-icons-source-code-coder-miscellaneous-angle-text.png'); /* Ruta de la imagen de fondo */
-  padding: 0px 20px; /* Ajusta el relleno según tu preferencia */
-  top: 13px;
-  left: 80px;
+  padding: 5px 20px; /* Ajusta el relleno según tu preferencia */
+  top: 15px;
+  left: 20px;
   color: #000000;
   text-align: center;
   font-family: Arial Black;
   font-size: 20px;
+  background-color: #f9bc60;
 }
 
 .btn-usac{
@@ -105,15 +69,15 @@ body {
 
 .btn-usuario{
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJQXlGJRDOadBd7996U1qKapu3LLrquQFWqA&usqp=CAU'); /* Ruta de la imagen de fondo */
-  padding: 17px 17px; /* Ajusta el relleno según tu preferencia */
-  top: 12px;
+  padding: 20px 20px; /* Ajusta el relleno según tu preferencia */
+  top: 15px;
   right: 30px;
   object-fit: cover; /* Ajustar la imagen para que cubra todo el botón */
 }
 
 /* Cambiar el color de fondo al pasar el cursor por encima */
 .btn-web:hover, .btn-usac:hover, .btn-usuario:hover,.btn-buscar:hover {
-  background-color: #abd1c6; /* Cambia el color de fondo al pasar el cursor */
+  background-color: #ffffff; /* Cambia el color de fondo al pasar el cursor */
 }
 
 /* Agregar un efecto de pulsación al hacer clic en el botón */
@@ -122,32 +86,14 @@ body {
 }
 
 
-/*---------------------------------------------------------------------*/
-.espacio-buscador{
-  height: 70px;
-  padding: 0 10px; /* Espaciado interno */
-  border: 3px solid #000000; /* Borde sólido de 2 píxeles de grosor, color gris (#333) */
-  border-radius: 50px; /* Bordes redondeados */
-  background-color: #f9bc60;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  margin-top: 155px; /* Agrega un espacio superior */
-  left: 50%; /* Mueve el elemento del ancho del contenedor */
-  transform: translate(-50%, -50%);
-  width: 70%; /* Toma el 100% del ancho del contenedor padre */
-  height: 55px;
-}
-
 .contenedor-buscador{
   /*background-color: #ff4500;*/
   padding: 0% 0%;
   width: 100%;
   height: 70% ;
   display: flex;
-  margin-left: 0%;
-  margin-right: 5%;
+  margin-left: 17%;
+  margin-right: 17%;
 }
 
 /* Estilos para el campo de entrada */
@@ -155,50 +101,38 @@ input[type="text"] {
   padding:  1%;
   border: 2px solid #000000;
   border-radius: 50px;
-  font-size: 90%;
+  font-size: 80%;
   background-color: #abd1c6;
   width: 100%; /* Toma el 100% del ancho del contenedor padre */
-  height: 100%;
+  height: 90%;
   margin-left: 5%;
   margin-right: 0%;
+  margin-top: 5px;
+  font-family: Arial Black;
+  text-align: center;
 }
 
 /* Estilos para el botón de búsqueda */
 .btn-buscar {
-  padding: 17px 17px;
+  padding: 15px 20px;
   background-image: url(https://w7.pngwing.com/pngs/712/138/png-transparent-digital-marketing-computer-icons-search-engine-optimization-colombia-miscellaneous-search-engine-optimization-service.png);
   /*background-color: #007bff;*/
   color: #fff;
   border: 2cap solid #000000;
-  border-radius:100%;
-  font-size: 17%;
+  border-radius:100px;
+  font-size: 17px;
   cursor: pointer;
-  display: inline-block;
   background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
   background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
   background-position: center center; /* Centra la imagen de fondo */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  height: auto;
-  margin-top: -0.4%;
+  margin-top: 0.7%;
   margin-left: 0%;
   margin-right: 0%;
+  object-fit: cover;
 }
 
 
-
-
-.espacio-filtro{
-  display: flex; /* Coloca los botones en línea horizontalmente */
-  justify-content: space-between; /* Distribuye el espacio entre los botones */
-  /*background-color: #007bff; /* Color de fondo del contenedor */
-  padding: 0% 6%; /* Espaciado interno del contenedor */
-  border-radius: 0%; /* Bordes redondos para el contenedor */
-  height: 80%;
-  width: 50%;
-  align-items: center;
-  margin-right: -4%;
-  margin-left: 0%;
-}
 
 .tex-filtro{
   padding: 0% 0%;
@@ -213,45 +147,31 @@ input[type="text"] {
 }
 
 /* Estilos para los botones */
-.btn-todo, .btn-curso, .btn-catedratico {
-  background-color: #abd1c6; /* Color de fondo de los botones */
-  color: #000000; /* Color del texto de los botones */
-  border: 2cap solid #000000;
-  border-radius: 50px; /* Bordes redondos para los botones */
-  padding: 0px 10px; /* Espaciado interno de los botones */
-  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
-  margin-right: 2%;
-  width: 40%;
-  height: 75%;
-  text-align: center;
-  font-size: 70%;
-  text-decoration:none;
-  font-family: Arial Black;
-}
 
-/* Estilos para los botones cuando se pasan por encima */
-.btn-todo:hover, .btn-curso:hover, .btn-catedratico:hover{
-  background-color: #e8e4e6; /* Cambia el color de fondo al pasar el cursor */
-}
 
-.btn-todo:active ,.btn-curso:active, .btn-catedratico:active{
-  transform: scale(0.90); /* Reduce ligeramente el tamaño al hacer clic */
-}
-
-.espacio-publicaciones{
+.espacio-perfil{
   height: 70%;
   padding: 0 0%; /* Espaciado interno */
   border: 3px solid #000000; /* Borde sólido de 2 píxeles de grosor, color gris (#333) */
   border-radius: 20px; /* Bordes redondeados */
-  background-color: #ffffff;
+  background-color: rgb(0, 70, 67);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  margin-top: 485px; /* Agrega un espacio superior */
+  margin-top: 465px; /* Agrega un espacio superior */
   left: 50%; /* Mueve el elemento del ancho del contenedor */
   transform: translate(-50%, -50%);
-  width: 70%; /* Toma el 100% del ancho del contenedor padre */
+  width: 60%; /* Toma el 100% del ancho del contenedor padre */
   height: 580px;
   overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
+}
+
+h3{
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.Nombre{
+  margin-top: -200px;
 }

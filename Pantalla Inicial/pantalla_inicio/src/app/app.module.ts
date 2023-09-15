@@ -8,6 +8,7 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContraComponent } from './paginas/contra/contra.component';
 import { CursosComponent } from './paginas/cursos/cursos.component'; // importar el modulo de rutas
+import { VerPerfComponent } from './paginas/ver-perfil/verperf.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CursosComponent } from './paginas/cursos/cursos.component'; // importar
     RegistroComponent,
     InicioComponent,
     ContraComponent,
-    CursosComponent
+    CursosComponent,
+    VerPerfComponent,
   ],
   imports: [
     BrowserModule,
