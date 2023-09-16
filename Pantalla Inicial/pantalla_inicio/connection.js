@@ -1,5 +1,4 @@
-const mysql = require('mysql');
-const { ColdObservable } = require('rxjs/internal/testing/ColdObservable');
+const mysql = require('mysql2');
 require('dotenv').config(); //instancia el archivo .env
 
 var connection = mysql.createConnection({     //crea la conexion con la base de datos con los datos del archivo .env

@@ -11,7 +11,7 @@ import { VerPerfComponent } from './paginas/ver-perfil/verperf.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },     //ruta del componente o pagina
-  { path: 'Inicio', component: InicioComponent}, // ruta Inicio
+  { path: 'inicio', component: InicioComponent}, // ruta Inicio
   { path: '', redirectTo: '/login', pathMatch: 'full' },   // ruta por defecto
   { path: 'contra', component: ContraComponent},
   { path: 'cursos', component: CursosComponent},

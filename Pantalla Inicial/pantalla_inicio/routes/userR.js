@@ -1,15 +1,19 @@
-const express = require('express');
-const connection = require('../connection');
-const router = express.Router();
+const express = require('express');         //importa express
+const connection = require('../connection');    //trae la conexion con la base de datos
+const router = express.Router();                       //crea el router para las rutas
 
-router.post('/registrarse', (req, res) => {
+router.post('/registrarse', (req, res) => {                 //ruta para registrar un usuario
     let user = req.body;
     query = "select carnet, name, lastname, email, password, role, status from usuario where carnet = ?";
     connection.query(query, [user.carnet], (err, resultado) => {
         if(!err){
             if(resultado.length <= 0){
-                query = "insert into carnet, name, lastname, email, password, status, role) value(?,?,?,?,?,'false','user')";
-                connection.query(query, [user.carnet, user.name, user.lastname, user.email, user.password], (err, resultado) => {
+                
+                //los datos que entraran a la base de dato status y role estan por defecto
+
+
+                query = "INSERT INTO usuario (carnet, name, lastname, email, password, status, role) VALUES (?, ?, ?, ?, ?, 'false', 'user')";        
+                connection.query(query, [user.carnet, user.name, user.lastname, user.email, user.password], (err, resultado) => {           
                    if(!err){
                        return res.status(200).json({message:"Usuario registrado"}); //responde con un mensaje 200 'OK'
                 }else{
@@ -32,13 +36,4 @@ router.post('/registrarse', (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-module.exports = router;
+module.exports = router;       //exporta las rutas

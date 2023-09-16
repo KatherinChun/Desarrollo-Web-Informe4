@@ -1,14 +1,15 @@
-CREATE TABLE IF NOT EXISTS `base`.`usuario` (                                  
-    id int primary key AUTO_INCREMENT,
-    carnet varchar(100) not null,
-    name varchar(100) not null,
-    lastname varchar(100) not null,
-    email varchar(100) not null,
-    password varchar(100) not null,
-    status varchar(20) not null,
-    role varchar(20) not null,
+CREATE TABLE IF NOT EXISTS `base`.`usuario` (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    carnet VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    role VARCHAR(20) NOT NULL,
     UNIQUE (carnet)
-)
+);
 
-insert into usuario (id, carnet, name, lastname, email, password, status, role) 
-values ('202011518', 'Katherin', 'Chun', 'kath@gmail.com', '123456', 'true', 'admin')
+
+INSERT INTO usuario (carnet, name, lastname, email, password, status, role) 
+VALUES ('202011518', 'Katherin', 'Chun', 'kath@gmail.com', '123456', 'active', 'admin');
