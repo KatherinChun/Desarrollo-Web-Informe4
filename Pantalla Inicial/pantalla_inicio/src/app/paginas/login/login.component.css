@@ -2,9 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	background-image: url(https://images.unsplash.com/photo-1614850523011-8f49ffc73908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG9zJTIwYXp1bGVzfGVufDB8fDB8fHww&w=1000&q=80);
-  background-size: cover;
-  background-repeat: no-repeat; 
+	background-color: rgb(0, 70, 67);
 	height: 100vh;
 }
 
@@ -15,7 +13,7 @@ body {
 	transform: translate(-50%, -50%);
 	width: 400px;
   height: 440px;
-	background: rgb(255, 255, 255);
+	background: #f9bc60;
 	border-radius: 10px;
 
 
@@ -24,8 +22,8 @@ body {
 .formulario h2{
 	text-align: center;
 	padding: 10px 10px 10px 0;
-  border-bottom: 1px solid silver;
-  color: rgb(82, 82, 158);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 
@@ -36,13 +34,13 @@ body {
 
 form .nombre{
 	position: relative;
-	border-bottom: 2px solid #84c8ff;
+	border-bottom: 2px solid rgb(0, 70, 67);
 	margin: 30px 0; 
 }
 
 form .contrasena{
 	position: relative;
-	border-bottom: 2px solid #84c8ff;
+	border-bottom: 2px solid rgb(0, 70, 67);
 	margin: 30px 0; 
 }
 
@@ -91,7 +89,7 @@ form .contrasena{
 
 .nombre input:focus ~ label{
 	top: -5px;
-	color: rgb(128, 136, 255);
+	color: rgb(0, 70, 67);
 }
 
 
@@ -103,13 +101,13 @@ form .contrasena{
 
 .contrasena_p{
 	margin: -5px 0 20px 5px;
-	color: blue;
+	color: rgb(0, 70, 67);
 	cursor: pointer;
 }
 
 .contrasena_p a{
 	cursor: pointer;
-	color: blue;
+	color: rgb(1, 66, 64);
 	text-decoration: none;
 }
 
@@ -121,7 +119,7 @@ button {
 	width: 100%;
 	height: 50px;
 	border: 1px solid;
-	background: rgb(97, 12, 255);
+	background: rgb(1, 66, 64);
 	border-radius: 25px;
 	font-size: 10px;
 	font-size: 18px;
@@ -145,12 +143,44 @@ button:hover{
 
 .registrarse a{
   	cursor: pointer;
-	color: blue;
+	color: rgb(0, 70, 67);
 	text-decoration: none;
 }
 
 .registrarse a:hover{
 	text-decoration: underline;
 }
+
+
+/* Estilo predeterminado para los labels cuando el campo de entrada tiene texto */
+.formulario .nombre label,
+.formulario .contrasena label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: grey;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* Estilo para los labels cuando el campo de entrada no tiene texto */
+.formulario .nombre input:placeholder-shown + label,
+.formulario .contrasena input:placeholder-shown + label {
+  top: 50%;
+  left: 5px;
+  color: grey;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* Estilo para ocultar completamente el texto del placeholder */
+.formulario .nombre input:not(:placeholder-shown) + label,
+.formulario .contrasena input:not(:placeholder-shown) + label {
+  opacity: 0; /* Hace que el texto del placeholder sea completamente transparente */
+}
+
+
 
   

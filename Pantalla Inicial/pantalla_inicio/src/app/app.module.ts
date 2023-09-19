@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; // importar el modulo http
 import { AppComponent } from './app.component';
 import { LoginComponent } from './paginas/login/login.component'; 
 import { RegistroComponent } from './paginas/registro/registro.component'; // importar el componente
@@ -24,6 +25,7 @@ import { VerPerfComponent } from './paginas/ver-perfil/verperf.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

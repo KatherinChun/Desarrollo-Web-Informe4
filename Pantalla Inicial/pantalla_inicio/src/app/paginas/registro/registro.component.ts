@@ -1,3 +1,4 @@
+import {HttpClient} from '@angular/common/http';
 import { Component } from '@angular/core';
 
 
@@ -10,12 +11,39 @@ export class RegistroComponent {
 
   nombre: string = '';
   contrasena: string = '';
+  apellidos: string = '';
+  correo: string = '';
+  carnet: string = '';
+
+
+constructor(private http: HttpClient) { }
+
 
 
   Cuenta() {
-    // Aquí puedes agregar la lógica para iniciar sesión.
-    // Por ejemplo, puedes enviar los datos al servidor para autenticar al usuario.
-    // También puedes mostrar un mensaje de error si la autenticación falla.
-  }
+    const usuario = {
+      carnet: this.nombre, // Puedes asignar los valores adecuados aquí
+      name: this.nombre,
+      lastname: this.apellidos,
+      email: this.correo,
+      password: this.contrasena
+    };
 
+  this.http.post('http://localhost:4200/UserR/registrarse', usuario).subscribe(
+    (response) => {
+      console.log(response);
+      console.log('Usuario creado exitosamente');
+      // Muestra un mensaje de éxito al usuario
+      
+    },
+    (error) => {
+      console.error(error); // Maneja los errores
+      console.log('Error al crear usuario');
+      // Muestra un mensaje de error al usuario si es necesario
+    }
+  );
+  
+}
+
+  
 }
