@@ -11,6 +11,8 @@ import { ContraComponent } from './paginas/contra/contra.component';
 import { CursosComponent } from './paginas/cursos/cursos.component'; // importar el modulo de rutas
 import { VerPerfComponent } from './paginas/ver-perfil/verperf.component';
 
+import {webService} from './services/inicio.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { VerPerfComponent } from './paginas/ver-perfil/verperf.component';
     AppRoutingModule,
     HttpClientModule, 
   ],
-  providers: [],
+  providers: [
+      webService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

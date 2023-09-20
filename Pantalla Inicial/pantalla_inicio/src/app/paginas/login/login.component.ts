@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { webService} from '../../services/inicio.service';
+import { Router } from '@angular/router'; 
 
 
 @Component({
@@ -7,14 +9,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  nombre: string = '';
+  carnet: string = '';
   contrasena: string = '';
 
-  iniciarSesion() {
-    // Aquí puedes agregar la lógica para iniciar sesión.
-    // Por ejemplo, puedes enviar los datos al servidor para autenticar al usuario.
-    // También puedes mostrar un mensaje de error si la autenticación falla.
-  }
+  constructor(private WebService: webService, private router: Router) {}
 
+  iniciarSesion() {
+    
+    // Utiliza el servicio para obtener la contraseña del usuario
+    this.WebService.getpassword(this.carnet).subscribe((response: any) => {
+      const storedPassword = response.password; // Contraseña almacenada en el servidor
+      //console.log(storedPassword);
+      // Compara la contraseña ingresada con la almacenada en el servidor
+      if (this.contrasena === storedPassword) {
+        this.router.navigate(['/inicio']); 
+      } else {
+        console.log('Error de autenticación: Contraseña incorrecta');
+      }
+    });
+  }
   
 }

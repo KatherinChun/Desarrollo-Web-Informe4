@@ -3,11 +3,11 @@
     <h2>Iniciar Sesion</h2>
     <form method="post">
         <div class="nombre">
-             <input type="text" required placeholder="Nombre">
-             <label>Nombre</label>
+             <input type="text" name="carnet" placeholder="Carnet" [(ngModel)]="carnet">
+             <label>Carnet</label>
         </div>
         <div class="contrasena">
-            <input type="password" required placeholder="Contraseña">
+            <input type="password" name="password" placeholder="Contraseña" [(ngModel)]="contrasena">
             <label>Contraseña</label>
         </div>
         <div class="contrasena_p">
