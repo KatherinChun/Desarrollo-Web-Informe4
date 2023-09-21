@@ -10,8 +10,8 @@
     <section class="espacio-buscador">
         <article class="contenedor-buscador">
             <button class="btn-web">NECH</button>
-            <input type="text" placeholder="Buscar perfil...">
-            <button class="btn-buscar"></button>
+            <input type="text" name="carnet" placeholder="Buscar perfil..." [(ngModel)]="carnet">
+            <button class="btn-buscar" (click)="mostrarperfil()"></button>
         </article>
         <aside class="espacio-filtro">
             <button class="btn-usuario"></button>
@@ -20,16 +20,20 @@
     </section>
     <section class="espacio-perfil">
         <div class="Nombre">
-            <h3>Nombre</h3>
+            <h3>Nombre:</h3>
+            <h4>{{perfil[0].nombre}}</h4>
         </div>
         <div class="Apellidos">   
-            <h3>Apellidos</h3>
+            <h3>Apellido:</h3>
+            <h4>{{perfil[0].apellido}}</h4>
         </div>
         <div class="Carnet">   
-            <h3>Carnet</h3>
+            <h3>Carnet:</h3>
+            <h4>{{perfil[0].carnet}}</h4>
         </div>
         <div class="Correo">
-            <h3>Correo</h3>
+            <h3>Correo:</h3>
+            <h4>{{perfil[0].correo}}</h4>
         </div>
     </section>
   </main>  

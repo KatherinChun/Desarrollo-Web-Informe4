@@ -159,19 +159,56 @@ input[type="text"] {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  margin-top: 465px; /* Agrega un espacio superior */
+  top: 465px; /* Agrega un espacio superior */
   left: 50%; /* Mueve el elemento del ancho del contenedor */
   transform: translate(-50%, -50%);
   width: 60%; /* Toma el 100% del ancho del contenedor padre */
   height: 580px;
   overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
+
 }
 
 h3{
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 25px;
+  color: #f9bc60;
 }
 
 .Nombre{
-  margin-top: -200px;
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 10%;
+  padding: 0px 200px;
+  align-items: center;
+}
+
+.Apellidos{
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 10%;
+  padding: 0px 200px;
+  align-items: center;
+}
+
+.Carnet{
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 10%;
+  padding: 0px 200px;
+  align-items: center;
+}
+
+.Correo{
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 10%;
+  padding: 0px 200px;
+  align-items: center;
+  display: inline-block;
+}
+
+h4{
+  font-size: 22px;
+  color: #ffffff;
+  margin-right: -0%;
+  margin-left: 50px;  
 }

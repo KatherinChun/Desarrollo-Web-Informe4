@@ -24,7 +24,7 @@ export class LoginComponent {
       if (this.contrasena === storedPassword) {
         this.router.navigate(['/inicio']); 
       } else {
-        console.log('Error de autenticación: Contraseña incorrecta');
+        console.error('Error de autenticación: Contraseña incorrecta - a');
       }
     });
   }

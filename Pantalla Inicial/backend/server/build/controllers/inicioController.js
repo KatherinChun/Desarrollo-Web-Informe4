@@ -27,7 +27,7 @@ class InicioController {
                 const [users] = yield database_1.default.query('SELECT password FROM usuario WHERE carnet = ?', [carnet]);
                 //console.log(users);
                 if (Array.isArray(users) && users.length === 0) {
-                    console.log('Error de autenticación: Contraseña incorrecta');
+                    console.log('Error el carnet no esta registrado');
                     res.status(404).json({ text: "el carnet no existe" });
                 }
                 else {
@@ -47,6 +47,28 @@ class InicioController {
     }
     update(req, res) {
         res.json({ Text: 'actualizando usuario ' + req.params.carnet });
+    }
+    getperfil(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { carnet } = req.params;
+                const [users] = yield database_1.default.query('SELECT carnet, nombre, apellido, correo FROM usuario WHERE carnet = ?', [carnet]);
+                console.log(users);
+                if (Array.isArray(users) && users.length === 0) {
+                    console.log('Error, perfil no encontrado');
+                    res.status(404).json({ text: "el carnet no existe" });
+                }
+                else {
+                    // el users[0] esta bien, si el dato esta, entonces usara el opbjeto de esa forma
+                    // no borrar el error
+                    return res.json(users);
+                }
+            }
+            catch (error) {
+                console.error('Error al buscar al perfil:', error);
+                res.status(404).json({ text: "Error al buscar al perfil:" });
+            }
+        });
     }
 }
 const inicioController = new InicioController();

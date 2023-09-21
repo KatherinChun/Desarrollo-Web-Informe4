@@ -13,6 +13,7 @@ class InicioRoutes {
     config() {
         this.router.get('/', inicioController_1.default.list);
         this.router.get('/:carnet', inicioController_1.default.getid);
+        this.router.get('/perfil/:carnet', inicioController_1.default.getperfil);
         this.router.post('/', inicioController_1.default.create);
         this.router.put('/:carnet', inicioController_1.default.update);
     }
