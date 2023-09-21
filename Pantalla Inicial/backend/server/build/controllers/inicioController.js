@@ -99,6 +99,7 @@ class InicioController {
             const { carnet } = req.params;
             const { password } = req.body;
             yield database_1.default.query('UPDATE usuario SET password = ? WHERE carnet = ?', [password, carnet]);
+            console.log('contraseña actualizada');
             res.json({ message: 'Contraseña actualizada' });
         });
     }
