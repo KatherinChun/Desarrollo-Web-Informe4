@@ -17,7 +17,6 @@ export class RegistroComponent {
   correo: string = '';
   
 
-
   constructor(private Httpcliente:HttpClient,private webService: webService, private router: Router) { }
   Cuenta(){
     this.webService.createUser(this.carnet, this.nombre, this.apellido, this.correo, this.password)

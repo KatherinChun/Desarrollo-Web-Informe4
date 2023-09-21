@@ -3,8 +3,8 @@ export default {
     database: {
         host: 'localhost',
         user: 'root',
-        password: 'MybaseROT001',
-        database: 'nech'
+        password: '1808',         //MybaseROT001
+        database: 'nechbd'                   //nech
     }
 
 }

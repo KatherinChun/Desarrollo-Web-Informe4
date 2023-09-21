@@ -77,6 +77,16 @@ class InicioController {
         }
     }
 
+    public async updatePassword(req: Request, res: Response): Promise<void> {
+        const { carnet } = req.params;
+        const { password } = req.body;
+        await pool.query('UPDATE usuario SET password = ? WHERE carnet = ?', [password, carnet]);
+        res.json({ message: 'Contraseña actualizada' });
+    }
+
+
+
+
 }
 
 const inicioController = new InicioController();
