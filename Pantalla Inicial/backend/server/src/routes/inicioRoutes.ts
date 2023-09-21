@@ -15,6 +15,7 @@ class InicioRoutes{
         this.router.put('/:carnet',inicioController.update)
         this.router.post('/createUser', inicioController.create);
         this.router.post('/publicacion', inicioController.creatpubli);
+        this.router.put('/updatePassword/:carnet', inicioController.updatePassword);  
 
     }
 }

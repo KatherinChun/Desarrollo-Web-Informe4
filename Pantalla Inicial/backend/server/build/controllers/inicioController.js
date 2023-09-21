@@ -94,6 +94,16 @@ class InicioController {
             }
         });
     }
+    
+    updatePassword(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { carnet } = req.params;
+            const { password } = req.body;
+            yield database_1.default.query('UPDATE usuario SET password = ? WHERE carnet = ?', [password, carnet]);
+            res.json({ message: 'Contraseña actualizada' });
+        });
+    }
+
     creatpubli(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

@@ -44,6 +44,13 @@ export class webService{
             catedratico: catedratico,
             mensaje: mensaje
         };
-        return this.http.post(`${this.API_URI}/publicacion`, pub)
-    }  
+        return this.http.post(`${this.API_URI}/publicacion`, pub)  
+    }
+    
+    updatePassword(carnet: string, password: string) {
+        const user = {
+          password: password
+        };
+        return this.http.put(`${this.API_URI}/updatePassword/${carnet}`, user);
+    }
 }
