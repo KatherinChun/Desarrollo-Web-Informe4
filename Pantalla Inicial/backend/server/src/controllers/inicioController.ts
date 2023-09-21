@@ -54,7 +54,7 @@ class InicioController {
     }
 
     public update (req: Request, res: Response){
-        res.json({Text: 'actualizando usuario ' + req.params.carnet})
+        res.json({Text: 'actualizando usuario '})
     }
 
     public async getperfil(req: Request, res: Response): Promise<any>{
@@ -74,6 +74,29 @@ class InicioController {
         catch (error){
             console.error('Error al buscar al perfil:', error);
             res.status(404).json({ text: "Error al buscar al perfil:" });
+        }
+    }
+
+    public async creatpubli (req: Request, res: Response): Promise<void>{
+        try {
+            const { carnet, curso, catedratico, mensaje } = req.body;
+            if (!carnet) {
+                console.log('Error, el carnet no puede ser nulo');
+                res.status(400).json({ text: "el carnet no puede ser nulo" });
+            } else {
+                const [userexis]: RowDataPacket[] = await pool.query('SELECT * FROM usuario WHERE carnet = ?', [carnet]);
+                if (userexis.length > 0) {
+                    await pool.query('INSERT INTO publicaciones (carnet, curso, catedratico, mensaje) VALUES (?, ?, ?, ?)', [carnet, curso, catedratico, mensaje]);
+                    console.log('publicacion creado exitosamente');
+                    res.status(200).json({ text: "publicacioncreado exitosamente" });
+                } else {
+                    console.log('Error, el usuario no existe');
+                    res.status(400).json({ text: "el usuario no existe" });
+                }
+            }
+        } catch (error) {
+            console.error('Error al publicar', error);
+            res.status(500).json({ text: "Error al publicar" });
         }
     }
 

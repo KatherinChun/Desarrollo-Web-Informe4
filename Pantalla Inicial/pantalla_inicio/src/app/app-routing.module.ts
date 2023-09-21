@@ -7,6 +7,7 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import {ContraComponent} from './paginas/contra/contra.component';
 import { CursosComponent } from './paginas/cursos/cursos.component';
 import { VerPerfComponent } from './paginas/ver-perfil/verperf.component'
+import { PublicarComponent } from './paginas/publicar/publicar.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },   // ruta por defecto
   { path: 'contra', component: ContraComponent},
   { path: 'cursos', component: CursosComponent},
-  { path: 'verperf', component: VerPerfComponent}
+  { path: 'verperf', component: VerPerfComponent},
+  { path: 'publicar', component: PublicarComponent}
 ];
 
 @NgModule({

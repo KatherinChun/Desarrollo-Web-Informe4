@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <main>
+    <!--Buscador de perfiles -->
+    <section class="espacio-buscador">
+        <article class="contenedor-buscador">
+            <button class="btn-web">NECH</button>
+            
+        </article>
+        <aside class="espacio-filtro">
+            <button class="btn-usuario"></button>
+        </aside>
+    <!--Visualizacion de perfiles-->    
+    </section>
+    <section class="espacio-perfil">
+        <div class="Carnet">
+            <h3>Carnet:</h3>
+            <input type="text" name="carnet" placeholder="Carnet..." [(ngModel)]="carnet">
+        </div>
+        <div class="Curso">   
+            <h3>Curso:</h3>
+            <input type="text" name="curso" placeholder="Curso..." [(ngModel)]="curso">
+        </div>
+        <div class="Catedratico">   
+            <h3>Catedratico:</h3>
+            <input type="text" name="catedratico" placeholder="Catedratico..." [(ngModel)]="catedratico">
+        </div>
+        <div class="Mensaje">
+            <h3>Mensaje:</h3>
+            <input type="text" name="mensaje" placeholder="Mensaje..." [(ngModel)]="mensaje">
+        </div>
+        <div>
+            <button class="btn-pub" (click)="Publicarr()">PUBLICAR</button>
+        </div>
+    </section>
+  </main>  
+</body>
+</html>

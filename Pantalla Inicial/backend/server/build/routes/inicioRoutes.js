@@ -16,6 +16,7 @@ class InicioRoutes {
         this.router.get('/perfil/:carnet', inicioController_1.default.getperfil);
         this.router.put('/:carnet', inicioController_1.default.update);
         this.router.post('/createUser', inicioController_1.default.create);
+        this.router.post('/publicacion', inicioController_1.default.creatpubli);
     }
 }
 const indexRoutes = new InicioRoutes();

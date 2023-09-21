@@ -70,7 +70,7 @@ class InicioController {
         });
     }
     update(req, res) {
-        res.json({ Text: 'actualizando usuario ' + req.params.carnet });
+        res.json({ Text: 'actualizando usuario ' });
     }
     getperfil(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -91,6 +91,33 @@ class InicioController {
             catch (error) {
                 console.error('Error al buscar al perfil:', error);
                 res.status(404).json({ text: "Error al buscar al perfil:" });
+            }
+        });
+    }
+    creatpubli(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { carnet, curso, catedratico, mensaje } = req.body;
+                if (!carnet) {
+                    console.log('Error, el carnet no puede ser nulo');
+                    res.status(400).json({ text: "el carnet no puede ser nulo" });
+                }
+                else {
+                    const [userexis] = yield database_1.default.query('SELECT * FROM usuario WHERE carnet = ?', [carnet]);
+                    if (userexis.length > 0) {
+                        yield database_1.default.query('INSERT INTO publicaciones (carnet, curso, catedratico, mensaje) VALUES (?, ?, ?, ?)', [carnet, curso, catedratico, mensaje]);
+                        console.log('publicacion creado exitosamente');
+                        res.status(200).json({ text: "publicacioncreado exitosamente" });
+                    }
+                    else {
+                        console.log('Error, el usuario no existe');
+                        res.status(400).json({ text: "el usuario no existe" });
+                    }
+                }
+            }
+            catch (error) {
+                console.error('Error al publicar', error);
+                res.status(500).json({ text: "Error al publicar" });
             }
         });
     }
