@@ -9,11 +9,12 @@ class InicioRoutes{
     }
 
     config(): void{
-        this.router.get('/', inicioController.list)
+        this.router.get('/', inicioController.list);
         this.router.get('/:carnet', inicioController.getid);
         this.router.get('/perfil/:carnet', inicioController.getperfil);
         this.router.put('/:carnet',inicioController.update)
         this.router.post('/createUser', inicioController.create);
+        this.router.post('/publicacion', inicioController.creatpubli);
 
     }
 }

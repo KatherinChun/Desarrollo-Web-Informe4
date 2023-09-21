@@ -36,4 +36,14 @@ export class webService{
         };
         return this.http.post(`${this.API_URI}/createUser`, user);
       }
+    
+    createpublicacion(carnet: string, curso: string, catedratico:string, mensaje:string){
+        const pub = {
+            carnet: carnet,
+            curso: curso,
+            catedratico: catedratico,
+            mensaje: mensaje
+        };
+        return this.http.post(`${this.API_URI}/publicacion`, pub)
+    }  
 }

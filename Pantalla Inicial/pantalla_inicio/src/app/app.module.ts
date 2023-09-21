@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContraComponent } from './paginas/contra/contra.component';
 import { CursosComponent } from './paginas/cursos/cursos.component'; // importar el modulo de rutas
 import { VerPerfComponent } from './paginas/ver-perfil/verperf.component';
+import { PublicarComponent } from './paginas/publicar/publicar.component';
 
 import {webService} from './services/inicio.service';
 
@@ -22,6 +23,7 @@ import {webService} from './services/inicio.service';
     ContraComponent,
     CursosComponent,
     VerPerfComponent,
+    PublicarComponent,
   ],
   imports: [
     BrowserModule,
