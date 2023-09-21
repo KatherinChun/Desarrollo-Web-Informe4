@@ -1,44 +1,39 @@
 <body>
-<div class="formulario">
-    <h2>Cambio de Contraseña</h2>
-    <form method="post">
-        <div class="carnet">
-             <input type="text" required placeholder="Carnet" [(ngModel)]="carnet" name="carnet">
-             <label>Carnet</label>
-        </div>
-        <div class="contrasena">
-            <input type="password" required placeholder="Contraseña" [(ngModel)]="contrasena" name="contrasena">
-            <label>Contraseña</label>
-        </div>
+  <div class="formulario">
+      <h2>Cambio de Contraseña</h2>
+      <form method="post">
+          <div class="carnet">
+               <input type="text"  placeholder="Carnet" [(ngModel)]="carnet" name="carnet">
+               <label>Carnet</label>
+          </div>
+          <div class="contrasena">
+              <input type="password"  placeholder="Contraseña" [(ngModel)]="contrasena" name="contrasena">
+              <label>Contraseña</label>
+          </div>
 
-        <div class="nueva">
-            <input type="password" required placeholder="Nueva Contraseña" [(ngModel)]="nuevaContrasena" name="nuevaContrasena">
-            <label>Nueva Contraseña</label>
-        </div>
+          <div class="nueva">
+              <input type="password"  placeholder="Nueva Contraseña" [(ngModel)]="nuevaContrasena" name="nuevaContrasena">
+              <label>Nueva Contraseña</label>
+          </div>
+          
+          <button (click)="Actualizar()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Cambiar Contraseña
+          </button>
+      </form>
+  </div>
 
-        <button (click)="Actualizar()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Cambiar Contraseña
-        </button>
-    </form>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" (hidden.bs.modal)="cerrarModal()">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">Contraseña Cambiada</h1>
-      <div class="modal-body">
-        <div *ngIf="mensaje" class="alert alert-success" role="alert">
-          {{ mensaje }}
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" (hidden.bs.modal)="cerrarModal()">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div *ngIf="mensaje" class="alert alert-success" role="alert">
+            {{ mensaje }}
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
 </body>

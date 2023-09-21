@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 })
 export class ContraComponent {
   carnet: string = '';
+  contrasena: string = '';
   nuevaContrasena: string = '';
   mensaje: string = ''; // Add this line
 
@@ -19,7 +20,7 @@ export class ContraComponent {
         alert('Debe ingresar una nueva contraseña');
         return;
       }
-      this.webService.updatePassword(this.carnet, this.nuevaContrasena)
+      this.webService.updatePassword(String(this.carnet), String(this.nuevaContrasena))
         .subscribe((res: any) => {
           console.log(res);
           this.mensaje = 'Contraseña actualizada exitosamente';
@@ -38,11 +39,3 @@ export class ContraComponent {
       
 }
 
-
-
-
-  
-
-  
-
-}

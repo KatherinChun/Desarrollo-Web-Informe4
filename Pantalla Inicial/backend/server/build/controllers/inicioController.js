@@ -94,7 +94,6 @@ class InicioController {
             }
         });
     }
-    
     updatePassword(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { carnet } = req.params;
@@ -103,7 +102,6 @@ class InicioController {
             res.json({ message: 'Contraseña actualizada' });
         });
     }
-
     creatpubli(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
