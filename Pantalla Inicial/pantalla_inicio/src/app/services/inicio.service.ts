@@ -25,4 +25,15 @@ export class webService{
     getuperfil(carnet: string){
         return this.http.get(`${this.API_URI}/perfil/${carnet}`);
     }
+
+    createUser(carnet: string, nombre: string, apellido: string, correo: string, password: string) {
+        const user = {
+          carnet: carnet,
+          nombre: nombre,
+          apellido: apellido,
+          correo: correo,
+          password: password
+        };
+        return this.http.post(`${this.API_URI}/createUser`, user);
+      }
 }

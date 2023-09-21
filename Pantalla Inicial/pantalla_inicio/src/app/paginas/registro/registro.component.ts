@@ -1,5 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import { Component } from '@angular/core';
+import { webService } from '../../services/inicio.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,42 +10,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
-
-  nombre: string = '';
-  contrasena: string = '';
-  apellidos: string = '';
-  correo: string = '';
   carnet: string = '';
-
-
-constructor(private http: HttpClient) { }
-
-
-
-  Cuenta() {
-    const usuario = {
-      carnet: this.nombre, // Puedes asignar los valores adecuados aquí
-      name: this.nombre,
-      lastname: this.apellidos,
-      email: this.correo,
-      password: this.contrasena
-    };
-
-  this.http.post('http://localhost:4200/UserR/registrarse', usuario).subscribe(
-    (response) => {
-      console.log(response);
-      console.log('Usuario creado exitosamente');
-      // Muestra un mensaje de éxito al usuario
-      
-    },
-    (error) => {
-      console.error(error); // Maneja los errores
-      console.log('Error al crear usuario');
-      // Muestra un mensaje de error al usuario si es necesario
-    }
-  );
+  nombre: string = '';
+  apellido: string = '';
+  password: string = '';
+  correo: string = '';
   
-}
+
+
+  constructor(private Httpcliente:HttpClient,private webService: webService, private router: Router) { }
+  Cuenta(){
+    this.webService.createUser(this.carnet, this.nombre, this.apellido, this.correo, this.password)
+      .subscribe((res: any) => {
+        console.log(res);
+        this.router.navigate(['/login']); // Navegar al componente de inicio de sesión
+      }, (err: any) => {
+        console.log(err);
+      });
+  }
 
   
 }

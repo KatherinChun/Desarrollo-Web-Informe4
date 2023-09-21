@@ -1,38 +1,37 @@
 <body>
-<div class="formulario">
-        <h2>Registro</h2>
-        <form method="post">
-            <div class="carnet">
-                <input type="text" required  placeholder="Registro académico">
-                <label>Registro académico</label>
-            </div>
-
-            <div class="nombre">
-                 <input type="text" required placeholder="Nombre">
-                 <label>Nombres</label>
-            </div>
-
-            <div class="apellidos">
-                 <input type="text" required placeholder="Apellidos">
-                 <label>Apellidos</label>
-            </div>
-
-            <div class="contrasena">
-                <input type="password" required placeholder="Contraseña">
-                <label>Contraseña</label>
-            </div>
-
-            <div class="correo">
-                <input type="text" required placeholder="Correo">
-                <label>Correo</label>
-            </div>
-            
-            <button (click)="Cuenta()">Crear Cuenta</button>
-            <div class="registrarse">
-                <a routerLink="/login">Iniciar sesion</a> <!-- se enlazan las paginas/componentes-->
-            </div>
-
-        </form>
-            
-</div>
-</body> 
+    <div class="formulario">
+      <h2>Registro</h2>
+      <form method="post" (ngSubmit)="Cuenta()">
+        <div class="carnet">
+          <input type="text" required placeholder="Registro académico" [(ngModel)]="carnet" name="carnet">
+          <label>Registro académico</label>
+        </div>
+  
+        <div class="nombre">
+          <input type="text" required placeholder="Nombre" [(ngModel)]="nombre" name="nombre">
+          <label>Nombres</label>
+        </div>
+  
+        <div class="apellidos">
+          <input type="text" required placeholder="Apellidos" [(ngModel)]="apellido" name="apellido">
+          <label>Apellidos</label>
+        </div>
+  
+        <div class="contrasena">
+          <input type="password" required placeholder="Contraseña" [(ngModel)]="password" name="password">
+          <label>Contraseña</label>
+        </div>
+  
+        <div class="correo">
+          <input type="text" required placeholder="Correo" [(ngModel)]="correo" name="correo">
+          <label>Correo</label>
+        </div>
+  
+        <button type="submit">Crear Cuenta</button>
+        <div class="registrarse">
+          <a routerLink="/login">Iniciar sesión</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  

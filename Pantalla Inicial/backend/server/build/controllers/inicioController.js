@@ -43,7 +43,31 @@ class InicioController {
         });
     }
     create(req, res) {
-        res.json({ Text: 'creando nuevo usuario' });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { carnet, nombre, apellido, correo, password } = req.body;
+                if (!carnet) {
+                    console.log('Error, el carnet no puede ser nulo');
+                    res.status(400).json({ text: "el carnet no puede ser nulo" });
+                }
+                else {
+                    const [existingUser] = yield database_1.default.query('SELECT * FROM usuario WHERE carnet = ?', [carnet]);
+                    if (existingUser.length > 0) {
+                        console.log('Error, el usuario ya existe');
+                        res.status(400).json({ text: "el usuario ya existe" });
+                    }
+                    else {
+                        yield database_1.default.query('INSERT INTO usuario (carnet, nombre, apellido, correo, password) VALUES (?, ?, ?, ?, ?)', [carnet, nombre, apellido, correo, password]);
+                        console.log('Usuario creado exitosamente');
+                        res.status(200).json({ text: "Usuario creado exitosamente" });
+                    }
+                }
+            }
+            catch (error) {
+                console.error('Error al crear el usuario:', error);
+                res.status(500).json({ text: "Error al crear el usuario" });
+            }
+        });
     }
     update(req, res) {
         res.json({ Text: 'actualizando usuario ' + req.params.carnet });

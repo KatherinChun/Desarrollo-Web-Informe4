@@ -12,8 +12,8 @@ class InicioRoutes{
         this.router.get('/', inicioController.list)
         this.router.get('/:carnet', inicioController.getid);
         this.router.get('/perfil/:carnet', inicioController.getperfil);
-        this.router.post('/', inicioController.create);
         this.router.put('/:carnet',inicioController.update)
+        this.router.post('/createUser', inicioController.create);
 
     }
 }
